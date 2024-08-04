@@ -1,0 +1,22 @@
+# Terraform state files
+*.tfstate
+*.tfstate.*
+
+# Backup files
+*.tfstate.backup
+
+# Terraform workspace files
+.terraform/
+
+# Crash log files
+crash.log
+
+# Ignore .terraform directory which contains plugin binaries and workspace data
+.terraform/
+
+# Ignore files created by `terraform plan` and `terraform apply`
+*.tfplan
+*.tfplan.*
+
+# Ignore .terraform directories
+.terraform/*
