@@ -1,0 +1,9 @@
+#cloud-config
+
+users:
+  - name: ansible
+    gecos: Ansible User
+    shell: /bin/bash
+    groups: users,admin,wheel,lxd
+    sudo: ALL=(ALL) NOPASSWD:ALL
+
