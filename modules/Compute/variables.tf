@@ -41,3 +41,9 @@ variable "tags" {
   description = "A list of tags to attach to the instance"
   default     = []
 }
+
+variable "startup_script" {
+  description = "Startup script to initialize the instance"
+  type        = string
+  default     = "" # Default to an empty string if no script is provided
+}

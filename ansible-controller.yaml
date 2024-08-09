@@ -1,0 +1,17 @@
+#cloud-config
+package_update: true
+package_upgrade: true
+packages:
+  - python3-pip
+  - ansible
+
+runcmd:
+  - pip3 install --upgrade pip
+  - pip3 install ansible
+
+  - name: ansible
+    shell: /bin/bash
+    groups: [admin, users, wheel]
+    ssh_import_id: None
+    lock_passwd: true
+    sudo: ALL=(ALL) NOPASSWD:ALL
