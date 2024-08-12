@@ -47,3 +47,6 @@ variable "startup_script" {
   type        = string
   default     = "" # Default to an empty string if no script is provided
 }
+variable "cloud_init_path" {
+  default = ""
+}

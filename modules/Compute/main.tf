@@ -16,7 +16,9 @@ resource "google_compute_instance" "vm_instance" {
 
   tags = var.tags
 
-  metadata_startup_script = var.startup_script
+  metadata = {
+    user-data = file(var.cloud_init_path)
+  }
 
 
 }
